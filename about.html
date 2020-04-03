@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>BIG DATA: Un estudio exhaustivo</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Estudio sobre BIG DATA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">¿Quiénes somos?
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item" 
+          x-data="{ show: false }"  
+          @click="show = !show">
+            <a class="nav-link" href="#">
+              Estudio sobre BIG DATA</a>
+            <ul class="submenu"
+            :aria-expanded="show ? 'true' : 'false'" 
+            :class="{ 'active': show }"
+            x-show="show">
+              <li class="nav-item">
+                <a class="nav-link" href="#">¿Qué es el BIG DATA?</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Las 3 V del BIG DATA</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h1 class="mt-5">¿Quiénes somos?</h1>
+        <p class="lead">Somos un grupo de estudiantes de los ciclos formativos de grados superior de:</p>
+        <ul class="list-unstyled">
+          <li>Desarrollo de aplicaciones web</li>
+          <li>Desarrollo de aplicaciones multiplataforma</li>
+          <li>Administración de sistema informáticos en red</li>
+        </ul>
+        <h2>Agradecimientos</h2>
+        <p>Hemos utilizado los siguientes recursos:</p>
+        <ul class="list-unstyled">
+          <li>Plantilla <i>Bare</i> de <a href="https://startbootstrap.com/templates/bare/">Start Bootstrap</a></li>
+          <li>Frameworks <a href="https://github.com/alpinejs/alpine#x-transition">Alpine.js</a></li>
+          <li>Como herramienta cooperativa hemos usado: <a href="https://github.com/">GitHub</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
