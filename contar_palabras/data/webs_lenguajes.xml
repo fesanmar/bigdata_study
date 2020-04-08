@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<webs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./webs_lenguajes.xsd">
+    <lenguaje nombre="python">
+        <web>https://es.wikipedia.org/wiki/Python</web>
+        <web>https://www.bejob.com/7-razones-para-programar-en-python/</web>
+    </lenguaje>
+    <lenguaje nombre="scala">
+        <web>https://es.wikipedia.org/wiki/Scala_(lenguaje_de_programación)</web>
+        <web>https://apiumhub.com/es/tech-blog-barcelona/lenguaje-scala/</web>
+    </lenguaje>
+    <lenguaje nombre="java">
+        <web>https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación)</web>
+        <web>https://www.campusmvp.es/recursos/post/5-motivos-por-los-que-utilizar-java-para-desarrollar-tus-aplicaciones.aspx</web>
+    </lenguaje>
+    <lenguaje nombre="haskell">
+        <web>https://es.wikipedia.org/wiki/Haskell</web>
+        <web>http://www.lcc.uma.es/~blas/pfHaskell/gentle/goodies.html</web>
+    </lenguaje>
+</webs>
