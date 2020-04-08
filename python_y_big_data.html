@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Por qué Python es tan utilizado en materia de Big Data frente a otros lenguajes. Inlcuye un proyecto de big data explicado">
+  <meta name="author" content="Felipe Santa-Cruz">
+  <meta name="keywords" content="Pyton, big data, tratamiento de datos">
+
+  <title>BIG DATA: Un estudio exhaustivo | Python y el Big Data</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Nuestro css -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Estudio sobre BIG DATA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">¿Quiénes somos?</a>
+          </li>
+          <li class="nav-item" x-data="{ show: false }" @click="show = !show">
+            <a class="nav-link active" href="#">Estudio sobre BIG DATA</a>
+            <span class="sr-only">(current)</span>
+            <ul class="submenu" :aria-expanded="show ? 'true' : 'false'" :class="{ 'active': show }" x-show="show">
+              <li class="nav-item">
+                <a class="nav-link" href="#">¿Qué es el BIG DATA?</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Las 3 V del BIG DATA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Python y el Big Data</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-left img-centered">
+        <h1 id="python-y-el-big-data">Python y el Big Data</h1>
+        <p>En los último años, Python se ha convertido en uno de los lenguajes de programación más utilizados en el
+          campo del Big Data. Los motivos son múltiples.</p>
+        <h2 id="simplicidad">Simplicidad</h2>
+        <p>Y es que, programar con Python es sinónimo de economía. En líneas generales, un programa escrito en Python
+          utiliza menos líneas de código que la mayoría de los lenguajes de programación.</p>
+        <p>Además, Python no utiliza punto y coma para indicar el final de una expresión, ni tampoco llaves para acotar
+          un bloque de código. En su lugar, Python utiliza sangrías, lo que, junto a otros elementos propios del
+          lenguaje, da lugar a una sintaxis muy legible y elegante.</p>
+        <p>Por otro lado, Python es un lenguaje multiparadigma, que soporta:</p>
+        <ul>
+          <li>Programación orientada a objetos</li>
+          <li>Programación imperativa</li>
+          <li>Programación funcional (en menor medida)</li>
+        </ul>
+        <p>Esto facilita que el lenguaje se adapte a los conocimientos de cada programador y de cada uso. Así, muchos
+          profesionales que no vienen del campo de la computación pueden trabajar con Python sin tener los conocimientos
+          que, por ejemplo Java, exigiría en cuanto a programación orientada a objetos, o Haskell en cuanto a
+          programación funcional.</p>
+        <p>Para terminar con este punto, Python es un lenguaje fuertemente tipado, pero de tipado dinámico. Esto
+          significa que Python utiliza tipos de datos, como pueden ser cadenas, enteros, etc., pero que, al declarar una
+          variable no necesitamos especificar el tipo de dato que va a alojar, y, además, podemos guardar en ella
+          variables de distinto tipo. No es exactamente así, ya que en Python todo son objetos, y no hay tipos
+          primitivos. Lo que en otros lenguajes son tipos primitivos, por ejemplo, un entero, en Python es un objeto de
+          tipo <code>int</code>.</p>
+        <p><img src="./images/python_int.png" alt="Declaración de una variable de tipo entero con Python"></p>
+        <p>Como puede verse en la imagen, hemos creado una variable llamada <code>entero</code>, le hemos asignado el
+          valor 1, y al llamar a la función <code>type()</code>, esta devuelve la clase del objeto pasado como
+          parámetro. En nuestro caso un objeto de la clase <code>int</code>. El motivo es que, al hacer la asignación,
+          no estamos alojando el valor de 1 en la variable <code>entero</code>, sino que estamos creando un objeto de
+          tipo entero y estamos referenciándolo con la variable <code>entero</code>. Así, si le asignamos otro valor,
+          estaremos haciendo el mismo proceso, es decir, estaremos instanciado un nuevo objeto.</p>
+        <p>Para terminar, mostraremos un programa muy sencillo escrito en Python y en Java. En él simplemen
+          te pediremos al usuario que introduzca su nombre por el teclado y lo sacaremos por pantalla si este contiene
+          más de un número determinado de caracteres.</p>
+        <p>Python:</p>
+        <pre><code class="lang-Python">nombre = <span class="hljs-built_in">input</span>(<span class="hljs-string">"Introduce tu nombre: "</span>)
+<span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(nombre) &gt; <span class="hljs-number">5</span>:
+    <span class="hljs-keyword">print</span>(<span class="hljs-keyword">f</span><span class="hljs-string">"Tu nombre es {nombre}"</span>)
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-keyword">print</span>(<span class="hljs-string">"Tu nombre es demasiado corto"</span>)
+</code></pre>
+        <p>Java:</p>
+        <pre><code class="lang-Java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> TuNombre {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) {
+        Scanner lector = <span class="hljs-keyword">new</span> Scanner(System.in);
+        System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"Introduce tu nombre:"</span>);
+        <span class="hljs-keyword">String</span> nombre = lector.nextLine();
+        lector.<span class="hljs-built_in">close</span>();
+        <span class="hljs-built_in">if</span> (nombre.length() &gt; <span class="hljs-number">5</span>) {
+            System.out.printf(<span class="hljs-string">"Tu nombre es %s"</span>, nombre);
+        } <span class="hljs-built_in">else</span> {
+            System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"Tu nombre es demasiado corto"</span>);
+        }
+    }
+}
+</code></pre>
+        <p>Como puede comprobarse, la sintaxis de Python es mucho más clara y sencilla. En cuanto al número de líneas
+          que ocupa el programa, la versión de Python es ostensiblemente más corta.</p>
+        <h2 id="recursos-sin-fin">Recursos sin fin</h2>
+        <p>Y no hablamos sólo de la biblioteca estándar del lenguaje, ya de por sí formidable, sino de las grandes y
+          numerosas aportaciones de la comunidad. En Python puedes encontrar soluciones para cada problema que te surja.
+          Y de una manera sumamente sencilla.</p>
+        <p>Python cuenta con su propio gestor de paquetes, de forma que, para instalar, por ejemplo, el paquete que
+          permite trabajar con intervalos imperfectos de tiempo <a href="https://github.com/fesanmar/Stilpy">Stilpy</a>,
+          bastaría con ejecutar el siguiente comando en la consola <code>pip install stilpy</code>, y Python se
+          encargaría de todo lo demás. Tras esto, sólo restaría incorporar la librería a nuestro proyecto haciendo un
+          import <code>from stilpy import TimeGaps</code>, y ya podríamos utilizar la librería.</p>
+        <p>Esto ahorra tiempo, y permite ir al meollo de nuestro problema. Por supuesto, está en manos del usuario el
+          tomarse el tiempo necesario para explorar el software que va a usar y comprobar si está debidamente probado.
+          Al tratarse, en la mayoría de los casos, de software libre, es muy sencillo acercarse al código y echar un
+          vistazo.</p>
+        <p>De todas formas, en líneas generales, si hablamos de Python, cuando nos encontramos con un problema, lo
+          habitual es que ya exista una solución lista para usar e incorporar a nuestro proyecto.</p>
+        <p>Entre las bibliotecas para Big Data más utilizadas se encuentran:</p>
+        <ul>
+          <li><strong>NumPy:</strong> Permite trabajar con matrices multidimensionales y dota de una biblioteca de
+            funciones matemáticas de algo nivel.</li>
+          <li><strong>Matplotlib:</strong> Una librería que permite trabajar con gráficos en los que, además, se pueden
+            insertar expresiones matemáticas.</li>
+          <li><strong>Pandas:</strong> Una de las librerías que más ha impulsado la profusión de Python en los últimos
+            tiempos. Utilizada para la manipulación y análisis de datos estructurados, destaca por su sencillez y por
+            las múltiples opciones que ofrece para trabajar directamente con recursos como hojas de cálculos, ficheros
+            csv, xml, JSON...</li>
+          <li><strong>Scikit Learn:</strong> Es una biblioteca destinada a trabajar con machine learning, que incluye
+            varios de los algoritmos de regresión, clasificación y de análisis de grupos. Se construye sobre NumPy y
+            SciPy e, igual que los anteriores, es un proyecto de software libre.</li>
+        </ul>
+        <p>Además, podemos encontrar varias librerías para recoger datos de la web como son Request, Beautiful Soup (que
+          permite analizar documentos HTML), Scrapy o Selenium, una herramienta que, entre otras cosas utiliza
+          <strong>XPath</strong> para navegar por los documentos HTML, y que permite al usuario interactuar con los
+          elementos de los mismos.</p>
+        <h2 id="compatibilidad-con-hadoop">Compatibilidad con Hadoop</h2>
+        <p><a href="https://hadoop.apache.org/">Hadoop</a> es un framework de código abierto que permite,
+          fundamentalmente, almacenar datos y correr aplicaciones. Dota a estas aplicaciones de almacenamiento masivo
+          para todo tipo de datos y una importante capacidad de procesamiento.</p>
+        <p><img src="./images/hadoop.png" alt="Hadoop"></p>
+        <p>Esto lo convierte en una poderosísima herramienta, más aún gracias a su bajo coste, ya que se trata de un
+          framework gratuito.</p>
+        <p>Python puede ser utilizada para escribir aplicaciones Hadoop MapReduce y aplicaciones que puedan acceder a la
+          API. Esta provee de una interfaz completa para acceder a HDFS (Hadoop Distributed FileSystem). Todo ello,
+          gracias a la interfaz facilitada por la librería <a href="https://crs4.github.io/pydoop/">PyDoop</a>.</p>
+        <p>El siguiente vídeo ofrece un acercamiento sencillo a esta librería:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IPgIvcJAPUA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2 id="proyecto">Proyecto</h2>
+        <p>Realizaremos un pequeño proyecto, muy simple, que consistirá en un programa escrito en Python que obtendrá el
+          contenido de dos webs para cada uno de los siguientes lenguajes:</p>
+        <ul>
+          <li>Dos lenguajes multiparadigma:<ul>
+              <li>Python</li>
+              <li>Scala</li>
+            </ul>
+          </li>
+          <li>Dos lenguajes puros:<ul>
+              <li>Java, como representante de la programación orientada a objetos</li>
+              <li>Haskell, como representante de la programación funcional.</li>
+            </ul>
+          </li>
+        </ul>
+        <p>Una vez obtenidos los contenidos de estas páginas, se obtendrá una lista con las 200 palabras más usadas en
+          estas webs, para cada lenguaje. Esto se traducirá en un documento HTML con una tabla que muestre el número de
+          palabras compartidas con los demás lenguajes.</p>
+        <h3 id="entorno-virtual">Entorno virtual</h3>
+        <p>El primer paso es crear un entorno virtual, en el que podremos instalar las distintas herramientas que vamos
+          a utilizar sin modificar la instalación principal de Python en nuestro SO.</p>
+        <p>Para ello, creamos primero una carpeta. En nuestro caso, la llamaremos <code>proyecto_palabras</code>. Una
+          vez creada la carpeta, abrimos una terminal y navegamos hasta este directorio. Una vez allí, creamos el
+          entorno virtual usando la librería <code>venv</code>:</p>
+        <pre><code class="lang-cmd">python -m venv <span class="hljs-keyword">virtual</span>
+</code></pre>
+        <p>A continuación, activamos el entorno virtual. En Windows, navegamos a la carpeta <code>Scripts</code>, dentro
+          de <code>virtual</code>, y ejecutamos el comando <code>activate</code>.</p>
+        <p>Una vez activado el entorno virtual, instalamos en él las librerías externas que vamos a utilizar, con los
+          siguientes comandos:</p>
+        <ul>
+          <li>Requests: <code>pip install requests</code></li>
+          <li>Beautiful Soup 4: <code>pip install beautifulsoup4</code></li>
+          <li>lxml: <code>pip install lxml</code></li>
+        </ul>
+        <p>En nuestro proyecto, hacemos los imports pertinentes:</p>
+        <pre><code class="lang-Python"><span class="hljs-keyword">import</span> xml.etree.ElementTree <span class="hljs-keyword">as</span> ET
+<span class="hljs-keyword">import</span> requests
+<span class="hljs-title">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+<span class="hljs-title">from</span> lxml <span class="hljs-keyword">import</span> etree
+</code></pre>
+        <h3 id="las-4-fases-de-an-lisis-de-datos">Las 4 fases de análisis de datos</h3>
+        <p>Para facilitar la comprensión del proyecto, vamos a crear una función para cada una de las cuatro fases del
+          análisis de datos. Luego, el programa sólo tendrá que ir llamando a cada función.</p>
+        <p>De todas formas, cada paso irá acompañado de la función y de su uso dentro del <em>script</em>.</p>
+        <p>Todo se realizará en el mismo archivo. Un archivo llamado &quot;contar_palabras.py&quot;. Este archivo, junto
+          al resultado del estudio y las demás fuentes utilizadas se pueden descargar en la <a
+            href="https://github.com/fesanmar/bigdata_study">página del proyecto</a>.</p>
+        <h4 id="obtenci-n-de-datos">Obtención de datos</h4>
+        <p>Los lenguajes a utilizar y las webs a las que debemos realizar las peticiones se encuentran en el siguiente
+          archivo XML:</p>
+        <p>data\webs_lenguajes.xml</p>
+        <pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">"1.0"</span> encoding=<span class="hljs-string">"UTF-8"</span> <span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">webs</span> <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">"http://www.w3.org/2001/XMLSchema-instance"</span>
+<span class="hljs-attr">xsi:noNamespaceSchemaLocation</span>=<span class="hljs-string">"./webs_lenguajes.xsd"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">lenguaje</span> <span class="hljs-attr">nombre</span>=<span class="hljs-string">"python"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">web</span>&gt;</span>https://es.wikipedia.org/wiki/Python<span class="hljs-tag">&lt;/<span class="hljs-name">web</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">web</span>&gt;</span>https://www.bejob.com/7-razones-para-programar-en-python/<span class="hljs-tag">&lt;/<span class="hljs-name">web</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">lenguaje</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">lenguaje</span> <span class="hljs-attr">nombre</span>=<span class="hljs-string">"scala"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">web</span>&gt;</span>https://es.wikipedia.org/wiki/Scala_(lenguaje_de_programación)<span class="hljs-tag">&lt;/<span class="hljs-name">web</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">web</span>&gt;</span>https://apiumhub.com/es/tech-blog-barcelona/lenguaje-scala/<span class="hljs-tag">&lt;/<span class="hljs-name">web</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">lenguaje</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">lenguaje</span> <span class="hljs-attr">nombre</span>=<span class="hljs-string">"java"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">web</span>&gt;</span>https://es.wikipedia.org/wiki/Java_(lenguaje_de_programación)<span class="hljs-tag">&lt;/<span class="hljs-name">web</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">web</span>&gt;</span>https://www.campusmvp.es/recursos/post/5-motivos-por-los-que-utilizar-java-para-desarrollar-tus-aplicaciones.aspx<span class="hljs-tag">&lt;/<span class="hljs-name">web</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">lenguaje</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">lenguaje</span> <span class="hljs-attr">nombre</span>=<span class="hljs-string">"haskell"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">web</span>&gt;</span>https://es.wikipedia.org/wiki/Haskell<span class="hljs-tag">&lt;/<span class="hljs-name">web</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">web</span>&gt;</span>http://www.lcc.uma.es/~blas/pfHaskell/gentle/goodies.html<span class="hljs-tag">&lt;/<span class="hljs-name">web</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">lenguaje</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">webs</span>&gt;</span>
+</code></pre>
+        <p>Como puede verse, este documento sólo contiene cuatro lenguajes, y dos sitios web que consultar por cada uno
+          de ellos. La idea es que esto pudiera ser extendido o modificado. Para evitar errores de forma que pudiera
+          ocasionar que nuestro programa buscara etiquetas o atributos que no existen, creamos un esquema XSD con el que
+          validaremos el archivo XML que utilicemos:</p>
+        <p>data\webs_lenguajes.xsd</p>
+        <pre><code class="lang-xsd"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">"1.0"</span> encoding=<span class="hljs-string">"UTF-8"</span> <span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">xs:schema</span> <span class="hljs-attr">xmlns:xs</span>=<span class="hljs-string">"http://www.w3.org/2001/XMLSchema"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"webs"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">xs:complexType</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">xs:sequence</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"lenguaje"</span> <span class="hljs-attr">minOccurs</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">maxOccurs</span>=<span class="hljs-string">"unbounded"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">xs:complexType</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">xs:sequence</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">xs:element</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"web"</span> <span class="hljs-attr">minOccurs</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">maxOccurs</span>=<span class="hljs-string">"unbounded"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">xs:simpleType</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">xs:restriction</span> <span class="hljs-attr">base</span>=<span class="hljs-string">"xs:anyURI"</span> /&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">xs:simpleType</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">xs:element</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">xs:sequence</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">xs:attribute</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"nombre"</span> <span class="hljs-attr">use</span>=<span class="hljs-string">"required"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">xs:simpleType</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">xs:restriction</span> <span class="hljs-attr">base</span>=<span class="hljs-string">"xs:string"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">xs:minLength</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> /&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">xs:restriction</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">xs:simpleType</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">xs:attribute</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:complexType</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">xs:element</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">xs:sequence</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">xs:complexType</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">xs:element</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">xs:schema</span>&gt;</span>
+</code></pre>
+        <p>Una vez claro de dónde salen los datos, definimos la función que tome los datos del XML y realice las
+          peticiones a las páginas de cada lenguaje para extraer el texto dentro de sus etiquetas <code>p</code>.</p>
+        <pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">obtener_datos</span><span class="hljs-params">(doc_xml)</span>:</span>
+    <span class="hljs-string">"""Obtiene el texto de los archivos html contenidos en el xml.
+    """</span>
+    <span class="hljs-comment"># Comprobamos que el xml esté bien formado</span>
+    doc = etree.parse(doc_xml)
+    xmlschema_doc = etree.parse(<span class="hljs-string">"./data/webs_lenguajes.xsd"</span>)
+    xmlschema = etree.XMLSchema(xmlschema_doc)
+    <span class="hljs-keyword">if</span> xmlschema.validate(doc)== <span class="hljs-keyword">False</span>:
+        <span class="hljs-keyword">raise</span> ValueError(f<span class="hljs-string">"El documento {doc_xml} no está bien formado."</span>)
+
+    <span class="hljs-comment"># Leemos del xml los lenguajes y sus webs</span>
+    arbol = ET.parse(doc_xml)
+    root = arbol.getroot()
+    webs_lenguajes = {}
+    <span class="hljs-keyword">for</span> lenguaje <span class="hljs-keyword">in</span> root:
+        webs_lenguajes[lenguaje.attrib.get(<span class="hljs-string">"nombre"</span>)] = [web.text <span class="hljs-keyword">for</span> web <span class="hljs-keyword">in</span> lenguaje]
+
+    <span class="hljs-comment"># Obtenemos los datos para cada lenguaje</span>
+    cotenidos = []
+    contenido_lenguaje = {}
+    <span class="hljs-keyword">for</span> leng, pags <span class="hljs-keyword">in</span> webs_lenguajes.items():
+        datos = <span class="hljs-string">""</span>
+        <span class="hljs-keyword">for</span> pag <span class="hljs-keyword">in</span> pags:
+            response = requests.get(pag)
+            soup = BeautifulSoup(response.text, <span class="hljs-string">'html.parser'</span>)
+            p = soup.find_all(<span class="hljs-string">"p"</span>)
+            <span class="hljs-keyword">for</span> parrafo <span class="hljs-keyword">in</span> p:
+                datos = <span class="hljs-string">" "</span>.join([datos, parrafo.text])
+        contenido_lenguaje[leng] = datos
+
+    <span class="hljs-keyword">return</span> contenido_lenguaje
+</code></pre>
+        <p>Esta función pude arrojar dos excepciones: una si el documento XML no se encuentra, y otra si no está bien
+          formado, por ello, la llamamos dentro de un bloque <code>try</code>.</p>
+        <pre><code class="lang-Python"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    xml = <span class="hljs-string">"./data/webs_lenguajes.xml"</span>
+    <span class="hljs-keyword">try</span>:
+        datos = obtener_datos(xml)
+    <span class="hljs-keyword">except</span> FileNotFoundError <span class="hljs-keyword">as</span> fnfe:
+        print(<span class="hljs-string">"No existe el archivo xml indicado"</span>)
+    <span class="hljs-keyword">except</span> ValueError <span class="hljs-keyword">as</span> ve:
+        print(ve)
+</code></pre>
+        <p>Ahora, nuestra variable <code>datos</code> contiene un diccionario con un único par clave-valor, siendo la
+          clave el nombre del lenguaje y el valor, el contenido en forma de <code>string</code>.</p>
+        <h3 id="preparaci-n-de-datos">Preparación de datos</h3>
+        <p>En nuestro caso, la primera manipulación de los datos consiste en identificar cada palabras y registrar
+          cuántas veces se repite. Para ello usamos la función <code>contar_palabras(cadena)</code>, que recibe un
+          objeto <code>cadena</code> de tipo <code>string</code> y devuelve un diccionario con un par clave-valor para
+          cada palabras. Como clave se utilizar la palabra, y su valor es el número de repeticiones de la misma.</p>
+        <pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">contar_palabras</span><span class="hljs-params">(cadena)</span>:</span>
+    <span class="hljs-string">""" Cuenta las veces que cada palabra se repite en una cadena de texto."""</span>
+
+    <span class="hljs-comment"># Este diccionario contendrá la palabra y el número de veces que se repite</span>
+    palabras = {}
+    <span class="hljs-comment"># Eliminamos los signos de puntuación</span>
+    puntuacion = (
+        <span class="hljs-string">"."</span>, <span class="hljs-string">","</span>, <span class="hljs-string">":"</span>, <span class="hljs-string">";"</span>, <span class="hljs-string">"-"</span>, <span class="hljs-string">"_"</span>, <span class="hljs-string">"¿"</span>,
+        <span class="hljs-string">"?"</span>, <span class="hljs-string">"¿"</span>, <span class="hljs-string">"!"</span>, <span class="hljs-string">"("</span>, <span class="hljs-string">")"</span>, <span class="hljs-string">"|"</span>, <span class="hljs-string">"\""</span>, <span class="hljs-string">"'"</span>
+    )
+
+    <span class="hljs-comment"># Recorremos las palabras</span>
+    <span class="hljs-keyword">for</span> palabra <span class="hljs-keyword">in</span> cadena.split():
+        <span class="hljs-comment"># Pasamos las palabras a minúsuclas</span>
+        palabra = palabra.lower()
+        <span class="hljs-comment"># Eliminamos los signos de puntuación al final de las palabra</span>
+        <span class="hljs-keyword">while</span> palabra.endswith(puntuacion):
+            palabra = palabra[:<span class="hljs-number">-1</span>]
+        <span class="hljs-comment"># Eliminamos los signos de puntuación al principio de las palabra</span>
+        <span class="hljs-keyword">while</span> palabra.startswith(puntuacion):
+            palabra = palabra[<span class="hljs-number">1</span>:]
+        <span class="hljs-comment"># Si la palabra no ha sido añadida, la añadimos</span>
+        <span class="hljs-keyword">if</span> palabras.get(palabra) <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+            palabras[palabra] = <span class="hljs-number">1</span>
+        <span class="hljs-comment"># Si ya existe en nuestro diccionario, añadimos + 1 a su valor</span>
+        <span class="hljs-keyword">else</span>:
+            palabras[palabra] += <span class="hljs-number">1</span>
+    <span class="hljs-comment"># Devolvemos el diccionario ordenado según el número de repeticiones</span>
+    <span class="hljs-keyword">return</span> {k: v <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> sorted(palabras.items(), key=<span class="hljs-keyword">lambda</span> item: item[<span class="hljs-number">1</span>], reverse=<span class="hljs-keyword">True</span>)}
+</code></pre>
+        <p>Esta función es llamada para cada uno de los lenguajes. De esta manera, creamos un nuevo diccionario para
+          cada uno de los lenguajes con un par clave-valor, el nombre del lenguaje y el diccionario devuelto por la
+          función <code>contar_palabras(cadena)</code> respectivamente. Luego, cada lenguaje, cada diccionario, es
+          añadido a una lista llamada <code>palabras_por_lenguaje</code>.</p>
+        <p>Ampliemos la implementación de nuestro programa con lo que acabamos de ver.</p>
+        <pre><code class="lang-Python"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    xml = <span class="hljs-string">"./data/webs_lenguajes.xml"</span>
+    <span class="hljs-keyword">try</span>:
+        datos = obtener_datos(xml)
+        palabras_por_lenguaje = []
+        <span class="hljs-keyword">for</span> lenguaje, contenido in datos.<span class="hljs-built_in">items</span>():
+            leng_palabras = {}
+            leng_palabras[<span class="hljs-string">"lenguaje"</span>] = lenguaje
+            leng_palabras[<span class="hljs-string">"palabras"</span>] = contar_palabras(contenido)
+            palabras_por_lenguaje.<span class="hljs-keyword">append</span>(leng_palabras)
+    except FileNotFoundError <span class="hljs-keyword">as</span> fnfe:
+        <span class="hljs-keyword">print</span>(<span class="hljs-string">"No existe el archivo xml indicado"</span>)
+    except ValueError <span class="hljs-keyword">as</span> <span class="hljs-keyword">ve</span>:
+        <span class="hljs-keyword">print</span>(<span class="hljs-keyword">ve</span>)
+</code></pre>
+        <h3 id="procesamiento-de-datos">Procesamiento de datos</h3>
+        <p>Una vez tenemos los datos listos, estamos preparados para procesarlos para que tengan la estructura que
+          deseamos. Para cada lenguaje, queremos un conjunto de las 200 palabras que más veces se repiten en las fuentes
+          analizadas. Pero, además, queremos evitar las palabras irrelevantes, comunes a todos las fuentes por ser las
+          palabras más comunes del castellano.</p>
+        <p>Para ello, nos descargamos de la RAE un archivo con <a href="http://corpus.rae.es/frec/1000_formas.TXT">las
+            1000 formas más comunes del castellano</a>. La lista es demasiado extensa, y nos quedamos con las 100
+          primeras palabras de la lista, para que nuestro programa elimine del cómputo, sobre todo, preposiciones,
+          determinantes, pronombres, etc. Tratamos el fichero para que sólo contenga una columna, pues no necesitamos la
+          frecuencia con que se repite cada palabra. Lo guardamos con extensión CSV, en la carpeta de data. El archivo
+          resultante tiene el siguiente aspecto.</p>
+        <p>data\100_formas.csv</p>
+        <p><img src="./images/100_formas.png" alt="100_formas.csv"></p>
+        <p>Como puede comprobarse, la primera palabra es el título de la columna. Está habrá que ser tenido en cuenta
+          cuando carguemos el fichero para introducir las palabras en una lista. También se puede comprobar que todas
+          las palabras están en minúsculas, por lo que no tendremos que tratarlas una vez cargadas.</p>
+        <p>Para este paso, usaremos la función <code>limpiar_datos(palabras)</code>, que recibe un diccionario
+          exactamente igual que el devuelto por la función que vimos arriba, <code>contar_palabras(cadena)</code>, y
+          devuelve un conjunto con las 200 palabras más repetidas en las fuentes consultadas del lenguaje, una vez
+          descartadas las 100 palabras más usadas en castellano.</p>
+        <pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">limpiar_datos</span><span class="hljs-params">(palabras)</span>:</span>
+    <span class="hljs-string">"""Limpia las palabras que se encuentran entre las 100 + usadas en español
+
+    Además, esta función devuelve un conjunto con las 200 palabras más
+    usadas del lenguaje.
+    """</span>
+    <span class="hljs-comment"># Cargamos la lista de las 100 formas más usadas en castellano</span>
+    formas_usadas = []
+    <span class="hljs-keyword">with</span> open(<span class="hljs-string">"./data/100_formas.csv"</span>, <span class="hljs-string">"r"</span>, encoding=<span class="hljs-string">"utf8"</span>) <span class="hljs-keyword">as</span> archivo:
+        contenido = iter(archivo.readlines())
+        next(contenido)
+        <span class="hljs-keyword">for</span> linea <span class="hljs-keyword">in</span> contenido:
+            formas_usadas.append(linea.strip())
+        archivo.close()
+    formas_usadas.append(<span class="hljs-string">""</span>)
+    <span class="hljs-comment"># Quitamos esas palabras del contenido</span>
+    palabras_limpiadas = []
+    <span class="hljs-keyword">for</span> palabra, frecuencia <span class="hljs-keyword">in</span> palabras.items():
+        <span class="hljs-keyword">if</span> palabra <span class="hljs-keyword">in</span> formas_usadas:
+            <span class="hljs-keyword">pass</span>
+        <span class="hljs-keyword">else</span>:
+            palabras_limpiadas.append(palabra)
+    <span class="hljs-comment"># Devolvemos un conjunto con las 200 palabras más usadas</span>
+    palabras200 = set()
+    <span class="hljs-keyword">for</span> i, palabra <span class="hljs-keyword">in</span> enumerate(palabras_limpiadas):
+        <span class="hljs-keyword">if</span> i &gt;= <span class="hljs-number">200</span>: <span class="hljs-keyword">break</span>
+        palabras200.add(palabra)
+    <span class="hljs-keyword">return</span> palabras200
+</code></pre>
+        <p>Ya que <code>limpiar_datos(palabras)</code> recibe un diccionario con las palabras y su frecuencia, como el
+          devuelto por la función <code>contar_palabras(cadena)</code>, pasaremos una llamada a esta última función,
+          como argumento de la primera, en la implementación.</p>
+        <pre><code class="lang-Python"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    xml = <span class="hljs-string">"./data/webs_lenguajes.xml"</span>
+    <span class="hljs-keyword">try</span>:
+        datos = obtener_datos(xml)
+        palabras_por_lenguaje = []
+        <span class="hljs-keyword">for</span> lenguaje, contenido in datos.<span class="hljs-built_in">items</span>():
+            leng_palabras = {}
+            leng_palabras[<span class="hljs-string">"lenguaje"</span>] = lenguaje
+            leng_palabras[<span class="hljs-string">"palabras"</span>] = limpiar_datos(contar_palabras(contenido))
+            palabras_por_lenguaje.<span class="hljs-keyword">append</span>(leng_palabras)
+    except FileNotFoundError <span class="hljs-keyword">as</span> fnfe:
+        <span class="hljs-keyword">print</span>(<span class="hljs-string">"No existe el archivo xml indicado"</span>)
+    except ValueError <span class="hljs-keyword">as</span> <span class="hljs-keyword">ve</span>:
+        <span class="hljs-keyword">print</span>(<span class="hljs-keyword">ve</span>)
+</code></pre>
+        <p>Al final del bucle <code>for</code>, la variable <code>palabras_por_leguaje</code> alberga la referencia a
+          una lista que contiene un diccionario con los siguientes elementos para cada leguaje:</p>
+        <ul>
+          <li><code>lenguaje</code>: Contiene una cadena de tipo <code>string</code> con el nombre del lenguaje</li>
+          <li><code>palabras</code>: Contiene un conjunto con las 200 palabras más usadas en las fuentes consultadas,
+            una vez descartadas las 100 palabras más usadas en castellano.</li>
+        </ul>
+        <h3 id="an-lisis-e-interpretaci-n-de-datos">Análisis e interpretación de datos</h3>
+        <p>Ya tenemos la información como la requeríamos. Ahora es momento de mostrarla. En nuestro caso, optamos por
+          pasarla a un documento HTML, que contiene una tabla en la que se cruza el número de palabras que cada lenguaje
+          tiene en común con los demás.</p>
+        <p>Esto lo realizamos con la función <code>mostrar_resultados(lenguajes)</code>, que recibe la lista
+          referenciada en la variable <code>palabras_por_lenguaje</code>.</p>
+        <pre><code class="lang-Python">def mostrar_resultados(lenguajes):
+    <span class="hljs-string">""</span><span class="hljs-string">"Crea un html con el resultado del estudio dentro de una tabla"</span><span class="hljs-string">""</span>
+
+    # Creamos <span class="hljs-keyword">el</span> texto que contendrá <span class="hljs-keyword">el</span> documento HTML
+    titulo =<span class="hljs-string">"Comparando lenguajes"</span>
+    resultado = <span class="hljs-keyword">f</span><span class="hljs-string">""</span><span class="hljs-comment">"</span>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=<span class="hljs-string">"es"</span>&gt;
+    <span class="hljs-symbol">&lt;head&gt;</span>
+        &lt;meta charset=<span class="hljs-string">"UTF-8"</span>&gt;
+        &lt;meta name=<span class="hljs-string">"viewport"</span> content=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;
+        <span class="hljs-symbol">&lt;title&gt;</span>{titulo}&lt;/title&gt;
+    &lt;/head&gt;
+    <span class="hljs-symbol">&lt;body&gt;</span>
+        <span class="hljs-symbol">&lt;h1&gt;</span>{titulo}&lt;/h1&gt;
+        <span class="hljs-symbol">&lt;p&gt;</span>Vamos <span class="hljs-keyword">a</span> ver <span class="hljs-keyword">el</span> número de palabras que comparten los distingos
+        lenguajes buscando <span class="hljs-keyword">en</span> diversas fuentes. No hablamos de su sintaxis,
+        sino de las palabras usadas <span class="hljs-keyword">en</span> dichas fuentes.&lt;/<span class="hljs-keyword">p</span>&gt;
+        &lt;table border=<span class="hljs-string">"1"</span> width=<span class="hljs-string">"40%"</span>&gt;
+            <span class="hljs-symbol">&lt;thead&gt;</span>
+                <span class="hljs-symbol">&lt;tr&gt;</span>
+                    <span class="hljs-symbol">&lt;th&gt;</span>Lenguajes&lt;/<span class="hljs-keyword">th</span>&gt;
+    <span class="hljs-string">""</span><span class="hljs-comment">"</span>
+    # Rellenamos los encabezados de <span class="hljs-keyword">la</span> lista
+    <span class="hljs-keyword">for</span> lenguaje in lenguaje<span class="hljs-variable">s:</span>
+        resultado = <span class="hljs-string">"\n"</span>.<span class="hljs-keyword">join</span>([resultado, <span class="hljs-keyword">f</span><span class="hljs-string">""</span><span class="hljs-string">"&lt;th&gt;{lenguaje["</span>lenguaje<span class="hljs-string">"].capitalize()}&lt;/th&gt;"</span><span class="hljs-string">""</span>])
+
+    # Cerramos <span class="hljs-keyword">la</span> fila de encabezados <span class="hljs-keyword">y</span> abrimos <span class="hljs-keyword">la</span> del cuerpo de <span class="hljs-keyword">la</span> tabla.
+    resultado = <span class="hljs-string">""</span>.<span class="hljs-keyword">join</span>([resultado, <span class="hljs-string">""</span><span class="hljs-comment">"</span>
+        &lt;/<span class="hljs-keyword">tr</span>&gt;
+        &lt;/thead&gt;
+        <span class="hljs-symbol">&lt;tbody&gt;</span>
+        <span class="hljs-string">""</span><span class="hljs-comment">"])</span>
+
+    # Para cada lenguaje creamos <span class="hljs-keyword">una</span> fila <span class="hljs-keyword">con</span> las comparaciones.
+    <span class="hljs-keyword">for</span> lenguaje in lenguaje<span class="hljs-variable">s:</span>
+        nombre1 = lenguaje[<span class="hljs-string">"lenguaje"</span>]
+        palabras1 = lenguaje[<span class="hljs-string">"palabras"</span>]
+        resultado = <span class="hljs-string">"\n"</span>.<span class="hljs-keyword">join</span>([resultado, <span class="hljs-keyword">f</span><span class="hljs-string">"&lt;tr&gt;&lt;td&gt;{nombre1.capitalize()}&lt;/td&gt;"</span>])
+
+        <span class="hljs-keyword">for</span> lenguaje in lenguaje<span class="hljs-variable">s:</span>
+            <span class="hljs-keyword">if</span> lenguaje[<span class="hljs-string">"lenguaje"</span>] == nombre1:
+                resultado = <span class="hljs-string">"\n"</span>.<span class="hljs-keyword">join</span>([resultado, <span class="hljs-string">"&lt;td&gt;NC&lt;/td&gt;"</span>])
+                <span class="hljs-keyword">continue</span>
+            nombre2 = lenguaje[<span class="hljs-string">"lenguaje"</span>]
+            palabras2 = lenguaje[<span class="hljs-string">"palabras"</span>]
+
+            comparten = <span class="hljs-built_in">len</span>(palabras1.intersection(palabras2))
+            resultado = <span class="hljs-string">"\n"</span>.<span class="hljs-keyword">join</span>([resultado, <span class="hljs-keyword">f</span><span class="hljs-string">"&lt;td&gt;{comparten}&lt;/td&gt;"</span>])
+
+        resultado = <span class="hljs-string">"\n"</span>.<span class="hljs-keyword">join</span>([resultado, <span class="hljs-string">"&lt;/tr&gt;"</span>])
+    resultado = <span class="hljs-string">"\n"</span>.<span class="hljs-keyword">join</span>([resultado, <span class="hljs-string">""</span><span class="hljs-comment">"</span>
+    &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;<span class="hljs-string">""</span><span class="hljs-comment">"])</span>
+
+    # Creamos <span class="hljs-keyword">el</span> documento HTML, escribimos <span class="hljs-keyword">en</span> é<span class="hljs-keyword">l</span> <span class="hljs-keyword">y</span> <span class="hljs-keyword">lo</span> cerramos.
+    html = <span class="hljs-keyword">open</span>(<span class="hljs-string">"./data/resultado.html"</span>, <span class="hljs-string">"w"</span>, encoding=<span class="hljs-string">"utf8"</span>)
+    html.<span class="hljs-keyword">write</span>(resultado)
+    html.<span class="hljs-keyword">close</span>()
+</code></pre>
+        <p>Ya sólo nos queda llamar a esta última función para que el documento sea creado y guardado en la carpeta
+          correspondiente. Esto lo hacemos inmediatamente después del bucle <code>for</code> con el que rellenamos
+          anteriormente la lista <code>palabras_por_lenguaje</code>.</p>
+        <pre><code class="lang-Python"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    xml = <span class="hljs-string">"./data/webs_lenguajes.xml"</span>
+    <span class="hljs-keyword">try</span>:
+        datos = obtener_datos(xml)
+        palabras_por_lenguaje = []
+        <span class="hljs-keyword">for</span> lenguaje, contenido in datos.<span class="hljs-built_in">items</span>():
+            leng_palabras = {}
+            leng_palabras[<span class="hljs-string">"lenguaje"</span>] = lenguaje
+            leng_palabras[<span class="hljs-string">"palabras"</span>] = limpiar_datos(contar_palabras(contenido))
+            palabras_por_lenguaje.<span class="hljs-keyword">append</span>(leng_palabras)
+
+        mostrar_resultados(palabras_por_lenguaje)
+        <span class="hljs-keyword">print</span>(<span class="hljs-string">"El archivo con el resultado ha sido creado con éxito."</span>)
+    except FileNotFoundError <span class="hljs-keyword">as</span> fnfe:
+        <span class="hljs-keyword">print</span>(<span class="hljs-string">"No existe el archivo xml indicado"</span>)
+    except ValueError <span class="hljs-keyword">as</span> <span class="hljs-keyword">ve</span>:
+        <span class="hljs-keyword">print</span>(<span class="hljs-keyword">ve</span>)
+</code></pre>
+        <p>Una vez ejecutado, el programa devuelve el siguiente HTML:</p>
+        <p>data\resultado.html</p>
+        <pre><code class="lang-HTML"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"es"</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Comparando lenguajes<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Comparando lenguajes<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Vamos a ver el número de palabras que comparten los distingos
+        lenguajes buscando en diversas fuentes. No hablamos de su sintaxis,
+        sino de las palabras usadas en dichas fuentes.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"40%"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Lenguajes<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Python<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Scala<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Java<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Haskell<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Python<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>NC<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>38<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>56<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>48<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Scala<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>38<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>NC<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>56<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>42<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Java<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>56<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>56<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>NC<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>56<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Haskell<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>48<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>42<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>56<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>NC<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+        <p>Lo cual se muestra de la siguiente forma en el navegador:</p>
+        <p><img src="./images/resultado.png" alt="resultado renderizado"></p>
+        <h3 id="conclusiones">Conclusiones</h3>
+        <p>Como puede verse en la tabla, al final, tanto Python como Scala tienen más palabras en común con Java que
+          entre sí, siendo ambos lenguajes multiparadigma. Incluso Haskell, un lenguaje puramente funcional, tiene más
+          palabras en común, en las webs consultadas, con Java que con Scala, lenguaje que soporta la programación
+          funcional.</p>
+        <p>Los resultados no son demasiado concluyentes. No hemos analizado demasiadas webs. Más bien, hemos analizado
+          pocas. Este estudio podría ser ampliado, fácilmente, simplemente añadiendo más webs y leguajes al XML
+          data\webs_lenguajes.xml. Por supuesto, habría que perfeccionar el programa. Por un lado, quizás se debería
+          ampliar la lista de las palabras más usadas en castellano y, además, si vamos a trabajar con datos masivos, de
+          no hacer uso de bibliotecas que nos permitan programación multihilo, el programa tardará mucho en devolver un
+          resultado.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
