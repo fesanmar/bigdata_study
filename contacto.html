@@ -3,84 +3,118 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <title>BIG DATA: Un estudio exhaustivo | Contacto</title>
+    <title>BIG DATA: Un estudio exhaustivo | Contacto</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Nuestro css -->
-  <link href="css/style.css" rel="stylesheet">
-  <!-- Alpine.js -->
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Nuestro css -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top header">
+        <div class="container">
+            <a class="navbar-brand" href="#">Estudio sobre BIG DATA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">¿Quiénes somos?
+                        </a>
+                    </li>
+                    <li class="nav-item" x-data="{ show: false }" @click="show = !show">
+                        <a class="nav-link" href="#">
+                            Estudio sobre BIG DATA</a>
+                        <ul class="submenu" :aria-expanded="show ? 'true' : 'false'" :class="{ 'active': show }"
+                            x-show="show">
+                            <!-- Copiad uno de estos li para vuestro nuevo submenú. -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">¿Qué es el BIG DATA?</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#">Las 3 V del BIG DATA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="python_y_big_data.html">Python y el Big Data</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Contacto</a>
+                        <span class="sr-only">(current)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
     <div class="container">
-      <a class="navbar-brand" href="#">Estudio sobre BIG DATA</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./about.html">¿Quiénes somos?
-            </a>
-          </li>
-          <li class="nav-item" 
-          x-data="{ show: false }"  
-          @click="show = !show">
-            <a class="nav-link" href="#">
-              Estudio sobre BIG DATA</a>
-            <ul class="submenu"
-            :aria-expanded="show ? 'true' : 'false'" 
-            :class="{ 'active': show }"
-            x-show="show">
-              <!-- Copiad uno de estos li para vuestro nuevo submenú. -->
-              <li class="nav-item">
-                <a class="nav-link" href="#">¿Qué es el BIG DATA?</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#">Las 3 V del BIG DATA</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="python_y_big_data.html">Python y el Big Data</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Contacto</a>
-            <span class="sr-only">(current)</span>
-          </li>
-        </ul>
-      </div>
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h1>Contacta con nosotros</h1>
+                <h2>¿Tienes alguna duda o sugerencia?</h2>
+                <p>¿Nos has entendido bien algo? ¿Hemos cometido algún error? ¿Te gustaría que extendiéramos algún
+                    punto? Culaquier aporte es bienvenido.</p>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-sm-8 mr-5 mb-4 text-left">
+                    <form method="POST" action="enviar.php" name="contacto">
+                        <div class="form-group">
+                            <label for="nombre">Nombre*</label>
+                            <input type="text" class="form-control" id="nombre" title="Introduce tu nombre" required
+                                placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" class="form-control" id="email" placeholder="Introduce tu email"
+                                required title="Introduce tu correo electrónico">
+                            <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email con
+                                nadie.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">Selecciona el motivo de tu consulta</label>
+                            <select class="form-control" id="asunto"
+                                title="Selecciona el motivo de tu consulta en la lista">
+                                <option value="duda">Tengo una duda</option>
+                                <option value="error">He encontrado un error en vuestra web</option>
+                                <option value="sugerencia">Tengo una sugerencia</option>
+                                <option value="otro">Otro motivo...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje*</label>
+                            <textarea class="form-control" id="mensaje" rows="3" required
+                                placeholder="Aquí tu mensaje..." title="Escribe aquí tu consulta"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-sm-3 composition">
+                </div>
+            </div>
+
+            <!-- Bootstrap core JavaScript -->
+            <script src="vendor/jquery/jquery.slim.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     </div>
-  </nav>
-
-  <!-- Page Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-left">
-        <h1 class="mt-5">Vuestro título aquí</h1>
-        <p>Vuestros contenido aquí.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>

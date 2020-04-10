@@ -53,8 +53,9 @@ code, tt {
   }
 
   .composition {
-	  background-image: url("../images/connections.jpg");
-	  opacity: 0.5;
+	  background-image: url("../images/contact_us2.png");
+	  background-position: center;
+	  background-size: contain;
 	  border-radius: 10px;
 	  min-width: 300px;
   }
