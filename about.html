@@ -19,10 +19,11 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top header">
     <div class="container">
       <a class="navbar-brand" href="#">Estudio sobre BIG DATA</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -36,15 +37,10 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item" 
-          x-data="{ show: false }"  
-          @click="show = !show">
+          <li class="nav-item" x-data="{ show: false }" @click="show = !show">
             <a class="nav-link" href="#">
               Estudio sobre BIG DATA</a>
-            <ul class="submenu"
-            :aria-expanded="show ? 'true' : 'false'" 
-            :class="{ 'active': show }"
-            x-show="show">
+            <ul class="submenu" :aria-expanded="show ? 'true' : 'false'" :class="{ 'active': show }" x-show="show">
               <li class="nav-item">
                 <a class="nav-link" href="#">¿Qué es el BIG DATA?</a>
               </li>
@@ -81,7 +77,11 @@
           <li>Plantilla <i>Bare</i> de <a href="https://startbootstrap.com/templates/bare/">Start Bootstrap</a></li>
           <li>Frameworks <a href="https://github.com/alpinejs/alpine#x-transition">Alpine.js</a></li>
           <li>Como herramienta cooperativa hemos usado: <a href="https://github.com/">GitHub</a></li>
-          <li>Se toman algunos estilos del proyecto <a href="https://gist.github.com/tuzz/3331384">github.css</a>, de <a href="https://gist.github.com/tuzz">tuzz</a></li>
+          <li>Se toman algunos estilos del proyecto <a href="https://gist.github.com/tuzz/3331384">github.css</a>, de <a
+              href="https://gist.github.com/tuzz">tuzz</a></li>
+          <li><a href="https://www.flickr.com/photos/thomashawk/2408568516/">Connection</a> de Thomas Hawk, ba jo
+            licencia <a href="https://creativecommons.org/licenses/by-nc/2.0/">Attribution-NonCommercial 2.0 Generic (CC
+              BY-NC 2.0)</a>. Se ha comprimido la imagen y aplicado tratamiento para modificar la opacidad.</li>
         </ul>
 
       </div>

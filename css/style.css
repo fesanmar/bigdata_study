@@ -51,3 +51,18 @@ code, tt {
 	background-color: transparent;
 	border: none;
   }
+
+  .composition {
+	  background-image: url("../images/connections.jpg");
+	  opacity: 0.5;
+	  border-radius: 10px;
+	  min-width: 300px;
+  }
+
+  .header {
+	background-image: url("../images/connections_header.png");
+	background-attachment: fixed;
+	
+	
+	
+  }
