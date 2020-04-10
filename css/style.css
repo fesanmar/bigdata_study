@@ -63,7 +63,12 @@ code, tt {
   .header {
 	background-image: url("../images/connections_header.png");
 	background-attachment: fixed;
-	
-	
-	
+  }
+
+  .sended {
+	  background-image: url(../images/sended.png);
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: 50%;
+	  min-height: 500px;
   }
