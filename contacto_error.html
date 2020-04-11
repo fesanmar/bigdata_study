@@ -67,54 +67,17 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-left">
-                <h1>Contacta con nosotros</h1>
-                <h2>¿Tienes alguna duda o sugerencia?</h2>
-                <p>¿Nos has entendido bien algo? ¿Hemos cometido algún error? ¿Te gustaría que extendiéramos algún
-                    punto? Culaquier aporte es bienvenido.</p>
+            <div class="col-lg-12 text-left sended">
+                <h1>¡Lo sentimos!</h1>
+                <h3>Ha ocurrido un error y tu correo no ha podido enviarse</h3>
+                <p>Ha ocurrido un error. Por faovor, inténtalo de nuevo más tarde.</p>
             </div>
         </div>
-            <div class="row">
-                <div class="col-sm-8 mr-5 mb-4 text-left">
-                    <form method="POST" action="enviar.php" name="contacto">
-                        <div class="form-group">
-                            <label for="nombre">Nombre*</label>
-                            <input type="text" class="form-control" name="nombre" id="nombre" title="Introduce tu nombre" required
-                                placeholder="Tu nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email*</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Introduce tu email"
-                                required title="Introduce tu correo electrónico">
-                            <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu email con
-                                nadie.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="asunto">Selecciona el motivo de tu consulta</label>
-                            <select class="form-control" id="asunto" name="asunto"
-                                title="Selecciona el motivo de tu consulta en la lista">
-                                <option value="duda">Tengo una duda</option>
-                                <option value="error">He encontrado un error en vuestra web</option>
-                                <option value="sugerencia">Tengo una sugerencia</option>
-                                <option value="otro">Otro motivo...</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje*</label>
-                            <textarea class="form-control" name="mensaje" id="mensaje" rows="3" required
-                                placeholder="Aquí tu mensaje..." title="Escribe aquí tu consulta"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </form>
-                </div>
-                <div class="col-sm-3 composition">
-                </div>
-            </div>
-
-            <!-- Bootstrap core JavaScript -->
-            <script src="vendor/jquery/jquery.slim.min.js"></script>
-            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     </div>
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.slim.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
