@@ -10,6 +10,9 @@
 	margin-right: auto;
 }
 
+/* Clase que justifica el texto de las p dentro del contenedor
+que albergue la clase. Este efecto se deshace con pantallas
+pequeñas, para evitar los espacios excesivos entre palabras.*/
 .text-justified-p p {
 	text-align: justify;
 }
@@ -75,4 +78,10 @@ code, tt {
 	  background-repeat: no-repeat;
 	  background-size: 50%;
 	  min-height: 500px;
+  }
+
+  @media screen and (max-width: 480px) {
+	.text-justified-p p {
+		text-align: left;
+	}
   }
