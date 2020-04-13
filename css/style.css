@@ -10,6 +10,10 @@
 	margin-right: auto;
 }
 
+.text-justified-p p {
+	text-align: justify;
+}
+
 code, tt {
 	margin: 0 2px;
 	padding: 0 5px;
