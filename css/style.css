@@ -1,3 +1,7 @@
+:root {
+   --border-letras: black;
+}
+
  /* Clase los submenús desplegables del navbar*/
  ul.submenu {
  	list-style: outside none none;
@@ -19,6 +23,10 @@ pequeñas, para evitar los espacios excesivos entre palabras.*/
  .text-justified-p p {
  	text-align: justify;
  }
+
+main {
+	min-height: calc(100vh - 56px - 50px);
+}
 
  /* Formatea las partes de código*/
 
@@ -74,11 +82,10 @@ pequeñas, para evitar los espacios excesivos entre palabras.*/
  }
 
  /* Formato del header en el navbar*/
- .header {
+ .header, .footer {
  	background-image: url("../images/connections_header.png");
  	background-attachment: fixed;
  }
-
  /* Formato para las páginas a las que se redirecciona al ususuario
  tras enviar el formulario de contacto.*/
  .sended {
@@ -87,6 +94,29 @@ pequeñas, para evitar los espacios excesivos entre palabras.*/
  	background-repeat: no-repeat;
  	background-size: 50%;
  	min-height: 500px;
+ }
+
+ /* Estilo para el footer*/
+ .footer {
+	 min-height: 50px;
+	 display: flex;
+	 justify-content: space-evenly;
+	 align-items: center;
+	 flex-wrap: wrap;
+	 color: white;
+	 font-weight: bold;
+	 text-shadow: 1px 0 0 var(--border-letras),
+	 -1px 0 0 var(--border-letras),
+	 0 1px 0  var(--border-letras),
+	 0 -1px 0 var(--border-letras),
+	 1px 1px var(--border-letras),
+	 -1px -1px 0 var(--border-letras),
+	 1px -1px 0 var(--border-letras),
+	 -1px 1px 0 var(--border-letras);
+ }
+
+ .footer span a {
+	 color: #fff;
  }
 
  @media screen and (max-width: 480px) {
