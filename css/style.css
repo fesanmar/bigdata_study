@@ -1,87 +1,96 @@
+ /* Clase los submenús desplegables del navbar*/
  ul.submenu {
-	list-style: outside none none;
-	margin-left: 0px;
-    padding-left: 0px;
-}
+ 	list-style: outside none none;
+ 	margin-left: 0px;
+ 	padding-left: 0px;
+ }
 
-.img-centered img, .img-centered iframe{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
+ /* Clase para centrar todas la img e iframes de un contenedor*/
+ .img-centered img, .img-centered iframe {
+ 	display: block;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
 
-/* Clase que justifica el texto de las p dentro del contenedor
+ /* Clase que justifica el texto de las p dentro del contenedor
 que albergue la clase. Este efecto se deshace con pantallas
 pequeñas, para evitar los espacios excesivos entre palabras.*/
-.text-justified-p p {
-	text-align: justify;
-}
 
-code, tt {
-	margin: 0 2px;
-	padding: 0 5px;
-	white-space: nowrap;
-	border: 1px solid #eaeaea;
-	background-color: #f8f8f8;
-	border-radius: 3px;
-  }
-  
-  pre code {
-	margin: 0;
-	padding: 0;
-	white-space: pre;
-	border: none;
-	background: transparent;
-  }
-  
-  .highlight pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	font-size: 13px;
-	line-height: 19px;
-	overflow: auto;
-	padding: 6px 10px;
-	border-radius: 3px;
-  }
-  
-  pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	font-size: 13px;
-	line-height: 19px;
-	overflow: auto;
-	padding: 6px 10px;
-	border-radius: 3px;
-  }
-  
-  pre code, pre tt {
-	background-color: transparent;
-	border: none;
-  }
+ .text-justified-p p {
+ 	text-align: justify;
+ }
 
-  .composition {
-	  background-image: url("../images/contact_us2.png");
-	  background-position: center;
-	  background-size: contain;
-	  border-radius: 10px;
-	  min-width: 300px;
-  }
+ /* Formatea las partes de código*/
 
-  .header {
-	background-image: url("../images/connections_header.png");
-	background-attachment: fixed;
-  }
+ code, tt {
+ 	margin: 0 2px;
+ 	padding: 0 5px;
+ 	white-space: nowrap;
+ 	border: 1px solid #eaeaea;
+ 	background-color: #f8f8f8;
+ 	border-radius: 3px;
+ }
 
-  .sended {
-	  background-image: url(../images/sended.png);
-	  background-position: center;
-	  background-repeat: no-repeat;
-	  background-size: 50%;
-	  min-height: 500px;
-  }
+ pre code {
+ 	margin: 0;
+ 	padding: 0;
+ 	white-space: pre;
+ 	border: none;
+ 	background: transparent;
+ }
 
-  @media screen and (max-width: 480px) {
-	.text-justified-p p {
-		text-align: left;
-	}
-  }
+ .highlight pre {
+ 	background-color: #f8f8f8;
+ 	border: 1px solid #cccccc;
+ 	font-size: 13px;
+ 	line-height: 19px;
+ 	overflow: auto;
+ 	padding: 6px 10px;
+ 	border-radius: 3px;
+ }
+
+ pre {
+ 	background-color: #f8f8f8;
+ 	border: 1px solid #cccccc;
+ 	font-size: 13px;
+ 	line-height: 19px;
+ 	overflow: auto;
+ 	padding: 6px 10px;
+ 	border-radius: 3px;
+ }
+
+ pre code, pre tt {
+ 	background-color: transparent;
+ 	border: none;
+ }
+
+ /* Formato para la composición de contacto.*/
+ .composition {
+ 	background-image: url("../images/contact_us2.png");
+ 	background-position: center;
+ 	background-size: contain;
+ 	border-radius: 10px;
+ 	min-width: 300px;
+ }
+
+ /* Formato del header en el navbar*/
+ .header {
+ 	background-image: url("../images/connections_header.png");
+ 	background-attachment: fixed;
+ }
+
+ /* Formato para las páginas a las que se redirecciona al ususuario
+ tras enviar el formulario de contacto.*/
+ .sended {
+ 	background-image: url(../images/sended.png);
+ 	background-position: center;
+ 	background-repeat: no-repeat;
+ 	background-size: 50%;
+ 	min-height: 500px;
+ }
+
+ @media screen and (max-width: 480px) {
+ 	.text-justified-p p {
+ 		text-align: left;
+ 	}
+ }
