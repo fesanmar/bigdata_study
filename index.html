@@ -24,7 +24,8 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top header">
     <div class="container">
       <a class="navbar-brand" href="#">Estudio sobre BIG DATA</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -37,21 +38,10 @@
           <li class="nav-item">
             <a class="nav-link" href="about.html">¿Quiénes somos?</a>
           </li>
-          <li class="nav-item" 
-          x-data="{ show: false }"  
-          @click="show = !show">
+          <li class="nav-item" x-data="{ show: false }" @click="show = !show">
             <a class="nav-link" href="#">
               Estudio sobre BIG DATA</a>
-            <ul class="submenu"
-            :aria-expanded="show ? 'true' : 'false'" 
-            :class="{ 'active': show }"
-            x-show="show">
-              <li class="nav-item">
-                <a class="nav-link" href="#">¿Qué es el BIG DATA?</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#">Las 3 V del BIG DATA</a>
-              </li>
+            <ul class="submenu" :aria-expanded="show ? 'true' : 'false'" :class="{ 'active': show }" x-show="show">
               <li class="nav-item">
                 <a class="nav-link" href="python_y_big_data.html">Python y el Big Data</a>
               </li>
@@ -99,7 +89,8 @@
   </main>
   <!-- Footer -->
   <footer class="footer">
-    <span class>&copy; <script>document.write(new Date().getFullYear());</script></span>
+    <span class>&copy;
+      <script>document.write(new Date().getFullYear());</script></span>
     <span class="text-muted"><a href="mailto:bigdatastudium@gmail.com" target="_top">bigdatastudium@gmail.com</a></span>
   </footer>
   <!-- Bootstrap core JavaScript -->
