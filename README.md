@@ -22,3 +22,5 @@ Comandos git:
 - Subir los cambios: `git push origin rama_nueva`
 
 No creo que haya problemas en abrir el proyecto con eclipse y trabajar con git desde ahí, si estáis más acostumbrados.
+
+Web resultante: [Big Data Studium](https://bigdatastudium.000webhostapp.com/)
